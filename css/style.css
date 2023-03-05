@@ -1,59 +1,90 @@
 * {
-	font-style: normal;
-	font-weight: normal;
-	box-sizing:border-box;
+  font-style: normal;
+  font-weight: normal;
+  box-sizing: border-box;
 }
-body{
-	margin: 0;
+body {
+  margin: 0;
 }
 nav {
-	height: 100px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: rgba(0, 0, 233, 0.769);
-	padding: 0 20px;
-	box-shadow: 0px 25px 15px rgb(121, 119, 119);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 233, 0.769);
+  padding: 0 20px;
+  box-shadow: 0px 25px 15px rgb(121, 119, 119);
+  z-index: 1;
+  position: relative;
 }
 label {
-	display: block;
-	cursor: pointer;
-	margin: 0 20px 0 0;
-	font-size: 50px;
-	line-height: 100px;
-	color: #FFFFFF;
+  display: block;
+  cursor: pointer;
+  margin: 0 20px 0 0;
+  font-size: 50px;
+  line-height: 100px;
+  color: #ffffff;
 }
-#toggle{
-	display: none;
+#toggle {
+  display: none;
 }
-.navbar__name{
-	color: #FFFFFF;
-	font-size: 35px;
+.navbar__name {
+  color: #ffffff;
+  font-size: 35px;
 }
 .navbar__icon img {
-	margin-top: 7px;
-	width: 120px;
+  margin-top: 7px;
+  width: 120px;
 }
-.navbar__menu{
-	width: 445px;
-	list-style-type: none;
-	display: flex;
-	justify-content: space-between;
-	padding: 0 20px;
-	display: none;
+.navbar__menu {
+  text-align: left;
+  flex-direction: column;
+  position: fixed;
+  width: 35%;
+  height: 100vh;
+  background: rgba(0, 0, 233, 0.769);
+  top: 100px;
+  left: -100%;
+  padding: 20px;
+  transition: all 0.9s;
+  bottom: 0;
+  margin-bottom: 0px;
+  height: auto;
+}
+#toggle:checked ~ .navbar__menu {
+  left: 0;
+  display: block;
+}
+ul {
+  padding: 0;
 }
 .navbar__menu li {
-	display: inline;
-	cursor: pointer;
+  font-size: 22px;
+  margin: 5px;
+  list-style-type: none;
+  cursor: pointer;
 }
-a{
-	font-size: 14px;
-	line-height: 17px;
-	text-transform: uppercase;
-	color: #FFFFFF;
-	text-decoration: none;
+a {
+  font-size: 25px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-decoration: none;
 }
-a:hover{
-	font-weight: bold;
-	-webkit-transform: scale(1.1);
+a:hover {
+  font-weight: bold;
+  -webkit-transform: scale(1.1);
+}
+.promo {
+  display: flex;
+  height: 100vh;
+  padding: 50px 0 187px 0;
+  background: url(../img/canoe.jpg) center center/cover no-repeat;
+	justify-content: center;
+    align-items: center;
+}
+h1{
+	color: #ffffff;
+	font-size: 65px;
+	text-align: center;
 }
