@@ -37,27 +37,26 @@ label {
   width: 120px;
 }
 .navbar__menu {
-  text-align: left;
-  flex-direction: column;
-  position: relative;
-  
-  height: 100vh;
-  background: rgba(0, 0, 233, 0.769);
-  top: 100px;
-  left: -100%;
-  padding: 20px;
-  transition: all 0.9s;
-  bottom: 0;
-  margin-bottom: 0px;
-  height: auto;
-	width: 0px;
-}
-#toggle:checked ~ .navbar__menu {
-  left: 0;
-  display: block;
-	position: fixed;
-	width: 35%;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: rgba(0, 0, 233, 0.769);
+	padding: 20px;
 	
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	display: none;
+}
+.navbar__menu.hidden {
+	display: none;
+	}
+.navbar__menu.visible {
+	display: block;
+	width: 35%;
+	height: 100vh;
+	overflow: auto;
+	transition: all 0.9s;
 }
 ul {
   padding: 0;
