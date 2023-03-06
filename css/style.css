@@ -39,8 +39,8 @@ label {
 .navbar__menu {
   text-align: left;
   flex-direction: column;
-  position: fixed;
-  width: 35%;
+  position: relative;
+  
   height: 100vh;
   background: rgba(0, 0, 233, 0.769);
   top: 100px;
@@ -50,13 +50,18 @@ label {
   bottom: 0;
   margin-bottom: 0px;
   height: auto;
+	width: 0px;
 }
 #toggle:checked ~ .navbar__menu {
   left: 0;
   display: block;
+	position: fixed;
+	width: 35%;
+	
 }
 ul {
   padding: 0;
+	margin-top: 35px;
 }
 .navbar__menu li {
   font-size: 22px;
@@ -65,8 +70,8 @@ ul {
   cursor: pointer;
 }
 a {
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 40px;
+  line-height: 60px;
   text-transform: uppercase;
   color: #ffffff;
   text-decoration: none;
@@ -74,6 +79,10 @@ a {
 a:hover {
   font-weight: bold;
   -webkit-transform: scale(1.1);
+}
+.container{
+	width: 1200px;
+	margin: 0 auto;
 }
 .promo {
   display: flex;
