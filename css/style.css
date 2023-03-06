@@ -127,3 +127,30 @@ h3{
 	font-weight: bolder;
 	margin-bottom: 0px;
 }
+
+@media (max-width: 1216px){
+	.container{
+		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	.navbar__name{
+		font-size: 25px;
+	}
+	.navbar__icon{
+		display: none;
+	}
+	a{
+		font-size: 30px;
+	}
+}
+
+@media (max-width: 425px){
+	.navbar__name{
+		font-size: 22px;
+	}
+	a{
+		font-size: 23px;
+	}
+}
